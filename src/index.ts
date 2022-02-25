@@ -34,3 +34,5 @@ const setQuery = (
       : searchFromConfig({...startConfig, ...config}))
   )
 }
+
+export {getQuery, setQuery}
