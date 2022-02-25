@@ -1,0 +1,10 @@
+{
+  "name": "@the-chat/query",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "git://github.com/the-chat/query",
+  "license": "MIT"
+}
