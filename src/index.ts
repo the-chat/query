@@ -16,7 +16,8 @@ const searchFromConfig = (config: Config) =>
 const getQuery = (url: string) => {
   const [, search] = url.split("?")
 
-  return configFromSearch(search)
+  if (search) return configFromSearch(search)
+  return {}
 }
 
 const setQuery = (
