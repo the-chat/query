@@ -27,12 +27,12 @@ const setQuery = (
   const [path] = url.split("?")
   const startConfig = getQuery(url)
 
-  return (
+  return encodeURI(
     path +
-    "?" +
-    (typeof config == "function"
-      ? searchFromConfig(config(startConfig))
-      : searchFromConfig({...startConfig, ...config}))
+      "?" +
+      (typeof config == "function"
+        ? searchFromConfig(config(startConfig))
+        : searchFromConfig({...startConfig, ...config}))
   )
 }
 
