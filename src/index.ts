@@ -5,7 +5,7 @@ const configFromSearch = (search: string) =>
   search
     .split("&")
     .map((keyVal) => keyVal.split("="))
-    .reduce((config, [key, val]) => ({...config, [key]: val}), {})
+    .reduce<Config>((config, [key, val]) => ({...config, [key]: val}), {})
 
 // return: x=1&y=2&z=afdsf
 const searchFromConfig = (config: Config) =>
