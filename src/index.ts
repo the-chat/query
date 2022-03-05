@@ -5,7 +5,7 @@ const configFromSearch = (search: string) =>
   search
     .split("&")
     .map((keyVal) => keyVal.split("="))
-    .reduce<Config>((config, [key, val]) => ({...config, [key]: val}), {})
+    .reduce<Config>((config, [key, val]) => ({ ...config, [key]: val }), {})
 
 // return: x=1&y=2&z=afdsf
 const searchFromConfig = (config: Config) =>
@@ -32,8 +32,8 @@ const setQuery = (
       "?" +
       (typeof config == "function"
         ? searchFromConfig(config(startConfig))
-        : searchFromConfig({...startConfig, ...config}))
+        : searchFromConfig({ ...startConfig, ...config }))
   )
 }
 
-export {getQuery, setQuery}
+export { getQuery, setQuery }
