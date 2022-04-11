@@ -9,7 +9,6 @@
     "outDir": "dist",
     "skipLibCheck": true,
     "declaration": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "react"
+    "forceConsistentCasingInFileNames": true
   }
 }
